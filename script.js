@@ -40,6 +40,41 @@ let teamnames = [
 	'Best of the Best.',
 	'Bosses.',
 	'Champions',
+	'All Stars',
+	'Amigos.',
+	'Avengers.',
+	'Bannermen',
+	'Best of the Best.',
+	'Bosses.',
+	'Champions',
+	'All Stars',
+	'Amigos.',
+	'Avengers.',
+	'Bannermen',
+	'Best of the Best.',
+	'Bosses.',
+	'Champions',
+	'All Stars',
+	'Amigos.',
+	'Avengers.',
+	'Bannermen',
+	'Best of the Best.',
+	'Bosses.',
+	'Champions',
+	'All Stars',
+	'Amigos.',
+	'Avengers.',
+	'Bannermen',
+	'Best of the Best.',
+	'Bosses.',
+	'Champions',
+	'All Stars',
+	'Amigos.',
+	'Avengers.',
+	'Bannermen',
+	'Best of the Best.',
+	'Bosses.',
+	'Champions',
 ];
 const getTeams = () => {
 	let user = getName();
@@ -51,4 +86,21 @@ const getTeams = () => {
 	let squad = teamgenerator();
 	col1.innerHTML = `<h1>your team</h1> <br> <h3>${user}</h3> <br><h3>${squad[1]}</h3> <br><h3>${squad[2]}</h3> <br><h3>${squad[3]}</h3>`;
 	col2.innerHTML = `<h1>squad name</h1> <br> <h2>${squadname}</h2>`;
+};
+
+const generateTeams = () => {
+	let squadname = teamnames[Math.floor(Math.random() * teamnames.length)];
+	let row = document.querySelector('.row');
+	let numb = document.querySelector('.teamsneeded').value;
+	for (let i = 0; i < numb; i++) {
+		const element = document.createElement('div');
+		element.classList.add('col-12');
+		element.classList.add('col-sm-6');
+		element.classList.add('col-md-4');
+
+		element.style.background = 'orange';
+
+		element.innerHTML = `<h2>${teamnames[i]}</h2> <br> <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, exercitationem!</h2>`;
+		row.appendChild(element);
+	}
 };
